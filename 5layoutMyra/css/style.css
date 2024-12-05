@@ -1,0 +1,413 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Minerva Modern Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Minerva Modern Bold'), url('MinervaModern Bold.woff') format('woff');
+}
+
+body {
+    background-color: rgb(61, 68, 53);
+    font-family: 'Minerva Modern', sans-serif;
+    font-style: normal;
+    color: #c2c8cc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+p {
+    font-size: 15PX;
+    color: white;
+    font-weight: lighter;
+}
+
+header h1 {
+    font-size: 29px;
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.header-container {
+    /* border: 1px solid #c2c8cc; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas de igual largura */
+    padding: 10px;
+}
+
+.container-item {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 15px;
+}
+
+.social-media-icons {
+    display: inline-block;
+    /* Para que o hover funcione melhor */
+    color: #c2c8cc;
+}
+
+#social-media-icons:hover {
+    transition: transform 0.3s, color 0.3s;
+    /* Transição suave */
+    transform: scale(1.2);
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+.container-item-2 {
+    padding-top: 45px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav {
+    display: flex;
+    margin: 0px 50px;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+nav a {
+    color: #c2c8cc;
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+}
+
+nav a:hover {
+    transition: transform 0.3s, color 0.3s;
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.container-item-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding-left: 150px;
+    padding-top: 30px;
+    /* justify-content: flex-start; */
+}
+
+#enter {
+    padding: 0px 0px;
+}
+
+#enter:hover {
+    text-decoration: underline;
+    transition: transform 0.3s, color 0.3s;
+    transform: scale(1.2);
+}
+
+#btn-trabalhe-comigo {
+    background-color: #c2c8cc;
+    color: black;
+    padding: 20px 32px;
+    /* CIMA -  DIREITA - BAIXO - ESQUERDA*/
+}
+
+#btn-trabalhe-comigo:hover {
+    transition: transform 0.3s, color 0.3s;
+    /* Transição suave */
+    transform: scale(1.2);
+    /* Aumenta o tamanho do ícone */
+}
+
+#trabalhe-comigo:hover {
+    transition: transform 0.3s, color 0.3s;
+    /* Transição suave */
+    transform: scale(1.2);
+    /* Aumenta o tamanho do ícone */
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+main article {
+    align-items: center;
+}
+
+.banner-title {
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-title .title-1 {
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 15px;
+}
+
+.banner-title .title-2 {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+figure.banner {
+    width: 100%;
+    /* Largura total ou personalizada */
+    height: 723px;
+    /* Altura do recorte desejada */
+    overflow: hidden;
+    /* Oculta as partes fora da altura */
+    margin: 0;
+    /* Remove espaçamentos adicionais */
+    position: relative;
+    /* Define um contexto para posicionamento */
+}
+
+figure.banner img {
+    width: 100%;
+    /* Garante que a imagem preencha a largura do container */
+    height: auto;
+    /* Mantém a proporção original */
+    position: absolute;
+    /* Permite ajuste de posicionamento */
+    top: -491px;
+    /* Ajusta o alinhamento vertical */
+    left: 0;
+    /* Alinha à esquerda */
+}
+
+.sobre-myra {
+    /* border: 1px solid #c2c8cc; */
+    text-align: center;
+}
+
+.sobre-myra h1 {
+    padding-top: 140px;
+}
+
+/* Estilo dos cards */
+.cards {
+    /* border: 1px solid #c2c8cc; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 50px;
+    margin: 45px 250px;
+}
+
+.card {
+    /* border: 1px solid #c2c8cc; */
+    margin: 0px 45px;
+}
+
+.card:hover {
+    transition: transform 0.8s, color 0.3s;
+    /* Transição suave */
+    transform: scale(1.2);
+    /* Aumenta o tamanho do ícone */
+}
+
+.card h2,
+p {
+    padding-bottom: 40px;
+}
+
+#saiba-mais {
+    text-decoration: underline;
+}
+
+#saiba-mais:hover {
+    font-weight: bolder;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+.card2 {
+    border-top: 1px solid #c2c8cc;
+    margin: 0px 295px;
+}
+
+.container-servicos-titulo h3, h2 {
+    margin: 25px 0px;
+}
+
+.container-servicos-titulo {
+    /* border: 1px solid #c2c8cc; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+}
+
+.container-servicos-titulo h2 {
+    text-align: start;
+    padding-left: 90px;
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.servicos-text {
+    /* border: 1px solid #c2c8cc; */
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    text-align: justify;
+    margin: 90px 50px 250px;
+}
+
+.servicos-text p {
+    padding: 0px;
+}
+
+.servicos-text:hover {
+    transition: transform 0.8s, color 0.3s;
+    transform: scale(1.2);
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+
+.img-content {
+    width: 350px;
+    height: 410px;
+    /* Oculta o conteúdo que ultrapassar os limites */
+    overflow: hidden;
+    position: relative;
+    margin: 70px 0px;
+    top: -30px;
+}
+
+.img-content img {
+    width: 100%;
+    top: -65px;
+    position: absolute;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+
+.grid-servicos-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-servicos-2 p{
+    font-size: 18px;
+    text-align: justify;
+    padding: 0px;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-rows: repeat(2, 0fr);
+    gap: 40px;
+    margin: 60px 0px 200px 120px;
+}
+
+#btn-marcar-consulta {
+    border: 0px;
+    background-color: #c2c8cc;
+    color: black;
+    font-size: large;
+    margin: 0px 40% 0px 0px;
+    padding: 25px;
+    text-align: center;
+}
+
+#btn-marcar-consulta:hover {
+    transition: transform 0.3s, color 0.3s;
+    transform: scale(1.2);
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 0fr);
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.img-grid-content img {
+    height: 360px;
+}
+
+.img-grid-content:hover {
+    transition: transform 0.3s, color 0.3s;
+    transform: scale(1.2);
+}
+
+.img-grid-content h4 {
+    padding-top: 15px;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+
+footer {
+    background-color: #c2c8cc;
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer h2 {
+    font-size: 30px;
+}
+
+footer form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 0px 37.5%;
+    gap: 15px;
+}
+
+footer form input {
+    border: 0px;
+    padding: 25px 49px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#btn-cadastro {
+    border: 0px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 22.5px;
+    margin: 0px 0px 0px;
+}
+
+#btn-cadastro:hover {
+    text-decoration: underline;
+}

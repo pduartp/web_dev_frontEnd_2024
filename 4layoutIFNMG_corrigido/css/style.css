@@ -1,0 +1,287 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 15px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(8, 113, 38, 1) 34%, rgba(9, 9, 121, 1) 51%, rgba(0, 212, 255, 1) 100%);
+    /* background-color: rgb(226, 226, 226); */
+}
+
+/*/////////////////////////////////////////////////////*/
+
+header {
+    padding: 30px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    /* padding-top: 45px; */
+    /* padding-bottom: 45px; */
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header h5 {
+    padding-top: 30px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+/*/////////////////////////////////////////////////////*/
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+    /* background-color: rgb(70, 70, 70);
+    color: white;
+    padding: 13px; */
+}
+
+/* Estilo dos links da barra de navegação */
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Altera cor do hover dos menus da barra de navegação */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* nav ul {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul .li-intranet{
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+} */
+
+/*/////////////////////////////////////////////////////*/
+
+
+/* Cria duas colunas de larguras diferentes com float à esquerda */
+/* Coluna da esquerda */
+.leftColumn {
+    float: left;
+    width: 75%;
+}
+
+/*/////////////////////////////////////////////////////*/
+
+/* Adiciona um efeito de card */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+/* Imagem */
+.fakeimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaa;
+    width: 100%;
+}
+
+.fakeimg img {
+    width: 100%;
+    height: 100%;
+}
+
+/* main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 0px;
+    margin-bottom: 35px;
+}
+
+main article {
+    margin-top: 35px;
+    margin-right: 30px;
+    background-color: white;
+    padding: 30px;
+}
+
+main article h2 {
+    padding-bottom: 15px;
+}
+
+main article figure {
+    padding-bottom: 15px;
+}
+
+main article h4 {
+    padding-bottom: 15px;
+}
+
+main article p {
+    padding-bottom: 15px;
+    text-align: justify;
+} */
+
+/*/////////////////////////////////////////////////////*/
+
+/* Coluna da direita */
+.rightColumn {
+    float: left;
+    width: 25%;
+    /* background-color: #f1f1f1; */
+    padding-left: 20px;
+}
+
+/*/////////////////////////////////////////////////////*/
+
+
+/* aside {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+aside section {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+aside section.section-news {
+    background-color: #42ffc0;
+}
+
+aside section.section-campus {
+    background-color: #fffc42;
+}
+
+aside section.section-media {
+    background-color: #ff4242;
+    
+}
+
+aside section.section-edital {
+    background-color: #42ff4f;
+}
+
+aside section h2 {
+    padding-bottom: 10px;
+}
+
+aside section p {
+    padding-top: 10px;
+}
+
+aside section li {
+    padding-top: 5px;
+}
+
+aside section li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+aside figure {
+    margin-top: 10px;
+    padding: 25px;
+    background-color: gray;
+}
+
+aside figure.column-figure {
+    display: flex;
+    flex-direction: column;
+} */
+
+/*/////////////////////////////////////////////////////*/
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*/////////////////////////////////////////////////////*/
+
+.col4 {
+    width: 25%;
+    float: left;
+}
+
+/*/////////////////////////////////////////////////////*/
+
+footer {
+    padding-left: 50px;
+    padding-top: 20px;
+    color: white;
+    text-align: left;
+    background-color: black;
+    margin-top: 20px;
+    height: 180px;
+    font-size: 18px;
+    /* display: flex;   */
+    /* flex-direction: row; */
+    /* justify-content: flex-start; */
+}
+
+
+footer section p:hover {
+    text-decoration: underline;
+}
+
+/* footer section {
+    margin: 50px;
+    font-size: 15px;
+    padding-right: 20px;
+} */
+
+/*footer section li {
+    padding-top: 10px;
+}
+*/
+
+/*/////////////////////////////////////////////////////*/
+
+/* Responsive layout - quando a tela tiver menos de 800px de largura, faz com que as duas colunas sejam empilhadas uma sobre a outra, em vez de uma ao lado da outra */
+@media screen and (max-width: 800px) {
+
+    .leftColumn,
+    .rightColumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout -quando a tela tiver menos de 400 px de largura, faça com que os links de navegação sejam empilhados uns sobre os outros, em vez de um ao lado do outro */
+@media screen and (max-width: 400px) {
+    nav a {
+        float: none;
+        width: 100%;
+    }
+}

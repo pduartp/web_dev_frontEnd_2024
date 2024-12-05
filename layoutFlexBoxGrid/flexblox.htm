@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX-BLOX</title>
+    <link rel="stylesheet" href="css/flexblox.css">
+</head>
+
+<body>
+    <h1>Demonstração de Propriedades do Flexbox</h1>
+
+    <div class="section">
+        <h2>1. Propriedade: `display: flex`</h2>
+        <p>Usando o Flexbox para alinhar os itens.</p>
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+        <p>O contêiner é flexível e os itens são distribuídos em linha (padrão).</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Propriedade: `flex-direction`</h2>
+        <p>Define a direção dos itens no contêiner. Pode ser <b>`row`, `row-reverse`, `column`, ou `column-reverse`</b>.
+        </p>
+        <h3>1. Row</h3>
+        <div class="container" style="flex-direction: row; justify-content: center;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+
+        <h3>2. Row-reverse</h3>
+        <div class="container" style="flex-direction: row-reverse; justify-content: center;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+        <h3>3. Column</h3>
+        <div class="container" style="flex-direction: column; width: 200px; justify-content: center;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+
+        <h3>4. Column-reverse</h3>
+        <div class="container" style="flex-direction: column-reverse; width: 200px; justify-content: center;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+        <p>
+            Estabelece o eixo principal, definindo assim a direção em que os flex items são alinhados no flex
+            container. O Flexbox é (com exceção de um wrapping opcional) um conceito de leiaute de uma só
+            direção. Pense nos flex items inicialmente posicionais ou em linhas horizontais ou em colunas
+            verticais.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>3. Propriedade: `flex-wrap`</h2>
+        <p>
+            Define se os itens devem se ajustar em várias linhas, caso o espaço não seja suficiente.
+            Pode ser <b>`nowrap`, `wrap`, ou `wrap-reverse`</b>.
+        </p>
+        <h3>1. nowrap</h3>
+        <div class="container" style="flex-wrap: nowrap">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+
+        <h3>2. wrap</h3>
+        <div class="container" style="flex-wrap: wrap;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+            <div class="item">Item 7</div>
+            <div class="item">Item 8</div>
+        </div>
+
+        <h3>3. wrap-reverse</h3>
+        <div class="container" style="flex-wrap: wrap-reverse;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+            <div class="item">Item 7</div>
+            <div class="item">Item 8</div>
+        </div>
+
+        <p>
+            Por padrão, os flex items vão todos tentar se encaixar em uma só linha. Com esta propriedade você
+            pode modificar esse comportamento e permitir que os ítens quebrem para uma linha seguinte
+            conforme for necessário.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>4. Propriedade: `flex-flow`</h2>
+        <p>
+            A propriedade flex-flow é uma propriedade shorthand (uma mesma declaração inclui vários
+            valores relacionados a mais de uma propriedade) que inclui flex-direction e flex-wrap.
+            Determina quais serão os eixos pricipal e transversal do container. O valor padrão é row nowrap.
+        </p>
+
+        <h3>1. row nowrap</h3>
+        <div class="container" style="flex-flow: row nowrap;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+
+        <h3>2. row wrap</h3>
+        <div class="container" style="flex-flow: row wrap;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+
+        <h3>2. row-reverse nowrap</h3>
+        <div class="container" style="flex-flow: row-reverse nowrap;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+
+        <h3>2. row-reverse nowrap</h3>
+        <div class="container" style="flex-flow: row-reverse wrap;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Propriedade: `justify-content`</h2>
+        <p>Flex-start</p>
+        <div class="container" style="justify-content: flex-start">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+
+        <p>Flex-end</p>
+        <div class="container" style="justify-content: flex-end;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+
+        <p>Center</p>
+        <div class="container" style="justify-content: center;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+
+        <p>Space-between</p>
+        <div class="container" style="justify-content: space-between;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+
+        <p>Space-around</p>
+        <div class="container" style="justify-content: space-around;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+
+        <p>Space-evenly</p>
+        <div class="container" style="justify-content: space-evenly;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+
+        <p>
+            Esta propriedade define o alinhamento dos ítens ao longo do eixo principal. Ajuda a distribuir o
+            espaço livre que sobrar no container tanto se todos os flex items em uma linha são inflexíveis, ou
+            são flexíveis mas já atingiram seu tamanho máximo. Também exerce algum controle sobre o
+            alinhamento de ítens quando eles ultrapassam o limite da linha.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>6. Propriedade: `align-tems`</h2>
+        
+        <p>flex-start</p>
+        <div class="container" style="align-items: flex-start; height: 150px;">
+            <div class="item" style="height: 45px;">Item 1</div>
+            <div class="item" style="height: 67px;">Item 2</div>
+            <div class="item" style="height: 25px;">Item 3</div>
+            <div class="item" style="height: 90px;">Item 4</div>
+        </div>
+
+        <p>flex-end</p>
+        <div class="container" style="align-items: flex-end; height: 150px;">
+            <div class="item" style="height: 45px;">Item 1</div>
+            <div class="item" style="height: 67px;">Item 2</div>
+            <div class="item" style="height: 25px;">Item 3</div>
+            <div class="item" style="height: 90px;">Item 4</div>
+        </div>
+
+        <p>center</p>
+        <div class="container" style="align-items: center; height: 150px;">
+            <div class="item" style="height: 45px;">Item 1</div>
+            <div class="item" style="height: 67px;">Item 2</div>
+            <div class="item" style="height: 25px;">Item 3</div>
+            <div class="item" style="height: 90px;">Item 4</div>
+        </div>
+
+        <p>stretch</p>
+        <div class="container" style="align-items: stretch; height: 150px;">
+            <div class="item"">Item 1</div>
+            <div class="item"">Item 2</div>
+            <div class="item"">Item 3</div>
+            <div class="item"">Item 4</div>
+        </div>
+
+
+        <p>baseline</p>
+        <div class="container" style="align-items: baseline; height: 150px;">
+            <div class="item" style="height: 45px;">Item 1</div>
+            <div class="item" style="height: 67px;">Item 2</div>
+            <div class="item" style="height: 25px;">Item 3</div>
+            <div class="item" style="height: 90px; line-height: 90px;">Item 4</div>
+        </div>
+        
+        <p>
+            define o comportamento padrão de como flex items são alinhados de acordo com o eixo transversal
+            (cross axis). De certa forma, funciona de forma similar ao justify-content, porém no eixo
+            transversal (perpendicular ao eixo principal).
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>7. Propriedade: `align-items`</h2>
+        <p>flex-start</p>
+        <div class="container" style="align-items: flex-start; height: 500px; flex-wrap: wrap; gap: 10px;">
+            <div class="item" style="height: 2px;">Item 1</div>
+            <div class="item" style="height: 25px;">Item 2</div>
+            <div class="item" style="height: 54px;">Item 3</div>
+            <div class="item" style="height: 80px;">Item 4</div>
+            <div class="item" style="height: 12px;">Item 5</div>
+            <div class="item" style="height: 32px;">Item 6</div>
+            <div class="item" style="height: 24px;">Item 7</div>
+            <div class="item" style="height: 67x;">Item 8</div>
+            <div class="item" style="height: 20px;">Item 9</div>
+            <div class="item" style="height: 73px;">Item 10</div>
+        </div>
+
+        <p>flex-end</p>
+        <div class="container" style="align-items: flex-end; height: 500px; flex-wrap: wrap; gap: 10px;">
+            <div class="item" style="height: 2px;">Item 1</div>
+            <div class="item" style="height: 25px;">Item 2</div>
+            <div class="item" style="height: 54px;">Item 3</div>
+            <div class="item" style="height: 80px;">Item 4</div>
+            <div class="item" style="height: 12px;">Item 5</div>
+            <div class="item" style="height: 32px;">Item 6</div>
+            <div class="item" style="height: 24px;">Item 7</div>
+            <div class="item" style="height: 67x;">Item 8</div>
+            <div class="item" style="height: 20px;">Item 9</div>
+            <div class="item" style="height: 73px;">Item 10</div>
+        </div>
+        
+        <p>stretch</p>
+        <div class="container" style="align-items: stretch; height: 500px; flex-wrap: wrap; gap: 10px;">
+            <div class="item" style="height: 2px;">Item 1</div>
+            <div class="item" style="height: 25px;">Item 2</div>
+            <div class="item" style="height: 54px;">Item 3</div>
+            <div class="item" style="height: 80px;">Item 4</div>
+            <div class="item" style="height: 12px;">Item 5</div>
+            <div class="item" style="height: 32px;">Item 6</div>
+            <div class="item" style="height: 24px;">Item 7</div>
+            <div class="item" style="height: 67x;">Item 8</div>
+            <div class="item" style="height: 20px;">Item 9</div>
+            <div class="item" style="height: 73px;">Item 10</div>
+        </div>
+
+        <p>space-between</p>
+        <div class="container" style="align-items: space-between; height: 500px; flex-wrap: wrap; gap: 10px;">
+            <div class="item" style="height: 2px;">Item 1</div>
+            <div class="item" style="height: 25px;">Item 2</div>
+            <div class="item" style="height: 54px;">Item 3</div>
+            <div class="item" style="height: 80px;">Item 4</div>
+            <div class="item" style="height: 12px;">Item 5</div>
+            <div class="item" style="height: 32px;">Item 6</div>
+            <div class="item" style="height: 24px;">Item 7</div>
+            <div class="item" style="height: 67x;">Item 8</div>
+            <div class="item" style="height: 20px;">Item 9</div>
+            <div class="item" style="height: 73px;">Item 10</div>
+        </div>
+
+        <p>space-around</p>
+        <div class="container" style="align-items: space-around; height: 500px; flex-wrap: wrap; gap: 10px;">
+            <div class="item" style="height: 2px;">Item 1</div>
+            <div class="item" style="height: 25px;">Item 2</div>
+            <div class="item" style="height: 54px;">Item 3</div>
+            <div class="item" style="height: 80px;">Item 4</div>
+            <div class="item" style="height: 12px;">Item 5</div>
+            <div class="item" style="height: 32px;">Item 6</div>
+            <div class="item" style="height: 24px;">Item 7</div>
+            <div class="item" style="height: 67x;">Item 8</div>
+            <div class="item" style="height: 20px;">Item 9</div>
+            <div class="item" style="height: 73px;">Item 10</div>
+        </div>
+
+        <p>
+            Organiza as linhas dentro de um flex container quando há espaço extra no eixo transversal, similar
+            ao modo como justify-content alinha ítens individuais dentro do eixo principal.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>8. Propriedade: `order`</h2>
+        
+        <div class="container" style="order: 1">
+            <div class="item">2</div>
+            <div class="item">1</div>
+            <div class="item">4</div>
+            <div class="item">3</div>
+        </div>
+        
+        <p>
+            Por padrão os flex items são dispostos na tela na ordem do código. Mas a
+            propriedade order controla a ordem em que aparecerão no container.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>1. Propriedade: `example`</h2>
+        <p>example</p>
+        <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+        <p>example.</p>
+    </div>
+
+</body>
+
+</html>

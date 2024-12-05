@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Completo de Flexbox</title>
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .example {
+            display: flex;
+            margin: 10px 0;
+            padding: 10px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 100px;
+            max-width: 150px;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        /* Estilos de visualização */
+        .example p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center; padding: 20px;">Demonstração de Propriedades do Flexbox</h1>
+
+    <!-- Seção de exibição do display: flex -->
+    <div class="section">
+        <h2>1. Propriedade: `display: flex`</h2>
+        <p>Usa o Flexbox para alinhar os itens.</p>
+        <div class="example" style="display: flex;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>O contêiner é flexível e os itens são distribuídos em linha (padrão).</p>
+    </div>
+
+    <!-- Seção de exibição do flex-direction -->
+    <div class="section">
+        <h2>2. Propriedade: `flex-direction`</h2>
+        <p>Define a direção dos itens no contêiner. Pode ser `row`, `row-reverse`, `column`, ou `column-reverse`.</p>
+        <div class="example" style="flex-direction: row;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Direção padrão (linha horizontal).</p>
+        
+        <div class="example" style="flex-direction: column;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Direção em coluna (vertical).</p>
+    </div>
+
+    <!-- Seção de exibição do flex-wrap -->
+    <div class="section">
+        <h2>3. Propriedade: `flex-wrap`</h2>
+        <p>Define se os itens devem se ajustar em várias linhas, caso o espaço não seja suficiente. Pode ser `nowrap`, `wrap`, ou `wrap-reverse`.</p>
+        <div class="example" style="flex-wrap: nowrap;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Sem quebra de linha (todos os itens permanecem na mesma linha).</p>
+        
+        <div class="example" style="flex-wrap: wrap;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+        <p>Com quebra de linha (itens quebram para a linha seguinte se necessário).</p>
+    </div>
+
+    <!-- Seção de exibição do justify-content -->
+    <div class="section">
+        <h2>4. Propriedade: `justify-content`</h2>
+        <p>Define o alinhamento dos itens ao longo do eixo principal. Pode ser `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, ou `space-evenly`.</p>
+        <div class="example" style="justify-content: flex-start;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Alinhamento à esquerda (padrão).</p>
+
+        <div class="example" style="justify-content: space-between;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Espaço entre os itens.</p>
+        
+        <div class="example" style="justify-content: center;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Itens centralizados.</p>
+    </div>
+
+    <!-- Seção de exibição do align-items -->
+    <div class="section">
+        <h2>5. Propriedade: `align-items`</h2>
+        <p>Define o alinhamento dos itens no eixo transversal (perpendicular ao eixo principal). Pode ser `flex-start`, `flex-end`, `center`, `baseline`, ou `stretch`.</p>
+        <div class="example" style="align-items: flex-start;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Alinhamento ao topo do contêiner.</p>
+
+        <div class="example" style="align-items: center;">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Itens centralizados verticalmente.</p>
+    </div>
+
+    <!-- Seção de exibição do align-self -->
+    <div class="section">
+        <h2>6. Propriedade: `align-self`</h2>
+        <p>Permite a modificação do alinhamento individual de um item. Pode ser `auto`, `flex-start`, `flex-end`, `center`, `baseline`, ou `stretch`.</p>
+        <div class="example" style="align-items: center;">
+            <div class="item" style="align-self: flex-start;">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+        </div>
+        <p>Item 1 alinhado ao topo, enquanto os outros estão centralizados.</p>
+    </div>
+
+    <!-- Seção de exibição do flex-grow, flex-shrink e flex-basis -->
+    <div class="section">
+        <h2>7. Propriedades: `flex-grow`, `flex-shrink`, `flex-basis`</h2>
+        <p>Combinadas, essas propriedades definem como os itens podem crescer, encolher e o tamanho inicial dos itens.</p>
+        <div class="example">
+            <div class="item" style="flex-grow: 2;">Item 1</div>
+            <div class="item" style="flex-shrink: 0;">Item 2</div>
+            <div class="item" style="flex-basis: 150px;">Item 3</div>
+        </div>
+        <p>Item 1 cresce mais, Item 2 não encolhe, e Item 3 tem um tamanho fixo de 150px.</p>
+    </div>
+
+</body>
+</html>
