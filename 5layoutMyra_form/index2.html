@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Myra</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Importação do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<body>
+    <header class="row">
+        <div id="header-content-1" class="col-4 col-s-4 header-content">
+            <p id="social-media-icons"><i class="fa fa-instagram" aria-hidden="true"></i></p>
+            <p id="social-media-icons"><i class="fa fa-facebook" aria-hidden="true"></i></p>
+            <p id="social-media-icons"><i class="fa fa-youtube-play" aria-hidden="true"></i></p>
+        </div>
+
+        <div id="header-content-2" class="col-4 col-s-4 header-content">
+            <div class="row">
+                <h1>BEM ESTAR COM MYRA</h1>
+
+                <nav>
+                    <a href="index.html#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#coaching">Coaching</a>
+                    <a href="#receitas">Receitas</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+        </div>
+
+        <div id="header-content-3" class="col-4 col-s-4 header-content">
+            <p id="enter">Entrar</p>
+            <p id="btn-trabalhe-comigo">Trabalhe comigo</p>
+        </div>
+    </header>
+
+    <main class="row">
+        <article class="col-6 col-s-6">
+            <section id="talk-to-me-container">
+                <div id="talk-to-me-content-title">
+                    <h1>FALE COMIGO</h1>
+                </div>
+
+                <div id="talk-to-me-content-text">
+                    <p>
+                        Para perguntas relativas a eventos ou imprensa,
+                        fale conosco aqui. Se estiver interessado em
+                        coaching particular, <u>agende agora uma consulta gratuita</u>.
+                    </p>
+                </div>
+            </section>
+        </article>
+
+        <article class="col-6 col-s-6">
+            <div class="form-container">
+                <!-- Campo Nome e Sobrenome -->
+                <div class="form-row">
+                    <div class="input-container">
+                        <label for="nome">Nome <span>(obrigatório)</span></label>
+                        <input type="text" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="input-container">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome" placeholder="Sobrenome">
+                    </div>
+                </div>
+
+                <!-- Campo E-mail -->
+                <label>E-mail <span>(obrigatório)</span></label>
+                <input type="email" id="email" placeholder="Seu e-mail">
+
+                <!-- Campo Assunto -->
+                <label>Assunto <span>(obrigatório)</span></label>
+                <input type="text" id="assunto" placeholder="Assunto">
+
+                <!-- Campo Mensagem -->
+                <label>Mensagem <span>(obrigatório)</span></label>
+                <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+
+                <!-- Data e Número -->
+                <label>Data do Evento</label>
+                <input type="date" id="dataEvento">
+                <label>Número de Participantes</label>
+                <input type="number" id="participantes" min="1">
+
+                <!-- Campo Select -->
+                <label>Escolha o Tipo de Contato</label>
+                <select>
+                    <option value="">Selecione</option>
+                    <option value="Serviços">Serviços</option>
+                    <option value="Eventos Corporativos">Eventos Corporativos</option>
+                    <option value="Eventos em Grupo">Eventos em Grupo</option>
+                    <option value="Imprensa">Imprensa</option>
+                </select>
+
+                <!-- Checkboxes -->
+                <label>Perguntando sobre</label>
+                <div class="checkbox-container">
+                    <label>
+                        <input type="checkbox" name="pergunta" value="servicos">
+                        Serviços
+                    </label>
+                    <label>
+                        <input type="checkbox" name="pergunta" value="corporativos">
+                        Eventos corporativos
+                    </label>
+                    <label>
+                        <input type="checkbox" name="pergunta" value="grupo">
+                        Eventos em grupo
+                    </label>
+                    <label>
+                        <input type="checkbox" name="pergunta" value="imprensa">
+                        Imprensa
+                    </label>
+                </div>
+
+
+                <!-- Botão de Envio -->
+                <button type="submit" id="enviarBtn">Enviar</button>
+        </article>
+    </main>
+
+    <footer>
+        <div id="footer-title" class="row">
+            <h2>NÃO PERCA NENHUMA RECEITA.</h1>
+        </div>
+        <div id="footer-form">
+            <form>
+                    <input type="email" name="email" placeholder="Endereço de E-mail">
+
+                    <button id="btn-cadastro">Cadastre-se</button>
+            </form>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
